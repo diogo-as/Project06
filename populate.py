@@ -7,7 +7,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship, sessionmaker
 from sqlalchemy import create_engine
 
-engine = create_engine('sqlite:///catalog.db')
+engine = create_engine('postgres://catalog:udacity@localhost:5432/catalogdb')
 Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)
 session = DBSession()

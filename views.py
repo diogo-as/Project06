@@ -52,7 +52,7 @@ GOOGLE_DISCOVERY_URL = (
 app = Flask(__name__)
 
 
-engine = create_engine('sqlite:///catalog.db?check_same_thread=False')
+engine = create_engine('postgres://catalog:udacity@localhost:5432/catalogdb')
 Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)
 session = DBSession()

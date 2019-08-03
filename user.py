@@ -29,7 +29,7 @@ class User(UserMixin):
     @staticmethod
     def get(user_id):
         engine = create_engine(
-            'sqlite:///catalog.db?check_same_thread=False'
+            'postgres://catalog:udacity@localhost:5432/catalogdb'
         )
         Base.metadata.bind = engine
         DBSession = sessionmaker(bind=engine)
