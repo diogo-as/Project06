@@ -1,0 +1,8 @@
+#!/usr/bin/python
+
+from views import app 
+
+
+if __name__ == "__main__":
+  #  app.secret_key = "secret"
+    app.run()

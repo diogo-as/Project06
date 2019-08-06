@@ -29,8 +29,8 @@ from oauth2client.client import flow_from_clientsecrets
 from oauth2client.client import FlowExchangeError
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy import create_engine, desc
-
+from sqlalchemy import create_engine, desc, asc
+import sqlalchemy
 import json
 import os
 import random
@@ -50,7 +50,7 @@ GOOGLE_DISCOVERY_URL = (
 )
 
 app = Flask(__name__)
-
+app.secret_key = "_LX$y?B@fzPyS!%WzJcWj76C@+J2Bs97XZSqX?bf"
 
 engine = create_engine('postgres://catalog:udacity@localhost:5432/catalogdb')
 Base.metadata.bind = engine
@@ -404,6 +404,7 @@ def deleteitem(categoria_id, item_id):
 # main function
 if __name__ == '__main__':
     # app.debug = True
-    app.secret_key = "secret"
-    app.run(host='0.0.0.0', port=5000, ssl_context="adhoc", debug=True)
-    # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///catalogo2.db'
+   # app.secret_key = "secret"
+    #app.run(host='0.0.0.0', port=443, ssl_context="adhoc", debug=True)
+    app.run(host='0.0.0.0')
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///catalogo2.db'

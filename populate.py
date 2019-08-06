@@ -12,6 +12,10 @@ Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
+# Clean database
+session.query(Item).delete()
+session.query(Categoria).delete()
+session.commit()
 
 # To populate DB for example purposes
 
@@ -29,22 +33,21 @@ categories = {
   10: "Handball"
 }
 
-
 for i in categories.values():
     addGuest = Categoria(name=str(i))
     session.add(addGuest)
     session.commit()
 
-for i in range(1, 40):
-    if i < 10:
-        item = Item(
+for i in range(1, 51):
+    if i <= 10:
+	item = Item(
             name="item "+str(i),
             description="description "+str(i),
             categoria_id=int(i)
         )
         session.add(item)
         session.commit()
-    if 10 <= i < 20:
+    if 10 < i <= 20:
         item = Item(
             name="item "+str(i),
             description="description "+str(i),
@@ -52,7 +55,7 @@ for i in range(1, 40):
         )
         session.add(item)
         session.commit()
-    if 20 <= i < 30:
+    if 20 < i <= 30:
         item = Item(
             name="item "+str(i),
             description="description "+str(i),
@@ -60,7 +63,7 @@ for i in range(1, 40):
         )
         session.add(item)
         session.commit()
-    if 30 <= i < 40:
+    if 30 < i <= 40:
         item = Item(
             name="item "+str(i),
             description="description "+str(i),
@@ -68,7 +71,7 @@ for i in range(1, 40):
         )
         session.add(item)
         session.commit()
-    if 40 <= i < 50:
+    if 40 < i <= 50:
         item = Item(
             name="item "+str(i),
             description="description "+str(i),
