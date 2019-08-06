@@ -51,7 +51,6 @@ Type `$ python populate.py`
 
 In your browser visit **https://app.104.197.67.49.nip.io** to view the CatalogApp.  
 You should be able to view all categories and itens.
-=======
 
 To add, edit and delete categories and associated itens you need to login with Google authentication.
 
