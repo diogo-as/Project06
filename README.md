@@ -1,10 +1,31 @@
 
 # CatalogApp
-This is a Catalog App with Google authentication.
+This is a Catalog App with Google authentication runing on VM instance on Google Cloud Engine.
 
 ## Environment
 
 python 2.7
+Postgres
+
+### Config O.S
+    sudo apt update
+    sudo apt git
+    sudo apt install git
+    sudo apt-get install nginx nginx-extras
+    sudo adduser grader
+    sudo usermod -aG sudo grader
+    su - grader
+    sudo ufw status
+    sudo ufw allow 2200
+    sudo ufw allow 80
+    sudo ufw allow https
+    sudo ufw deny 22
+    sudo ufw logging on
+    sudo ufw allow ntp
+    sudo ufw status
+    sudo apt install postgresql
+    sudo mkdir /Project06
+    sudo git clone https://github.com/diogo-as/Project06.git
 
 ### - Install python requirements
 
