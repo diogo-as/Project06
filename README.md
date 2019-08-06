@@ -2,9 +2,14 @@
 # CatalogApp
 This is a Catalog App with Google authentication runing on VM instance on Google Cloud Engine.
 
+## URL
+
+   https://app.104.197.67.49.nip.io
+
 ## Environment
 
 python 2.7
+
 Postgres
 
 ### Config O.S
@@ -42,20 +47,16 @@ To populate database for example.
 
 Type `$ python populate.py`
 
-## Run CatalogApp
+## Access CatalogApp
 
-<<<<<<< HEAD
-Type **`$ python views.py`** to run the Flask web server. In your browser visit **http://127.0.0.1:5000** to view the CatalogApp.  
+In your browser visit **https://app.104.197.67.49.nip.io** to view the CatalogApp.  
 You should be able to view all categories and itens.
 =======
-Type **`$ python views.py`** to run the Flask web server. In your browser visit **https://127.0.0.1:5000** to view the CatalogApp.  
-You should be able to view all categories and itens. 
->>>>>>> b211009d2a0df040f2135d6de26ce097055ede31
 
 To add, edit and delete categories and associated itens you need to login with Google authentication.
 
 ### API Json
 
-Now type **https://127.0.0.1:5000/categories** on your browser to view all categories in json format.
+Now type **https://app.104.197.67.49.nip.io/categories** on your browser to view all categories in json format.
 
-Now type **https://127.0.0.1:5000/itens** on your browser to view all itens in json format.
+Now type **https://app.104.197.67.49.nip.io/itens** on your browser to view all itens in json format.
